@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Lanote - Language Doodles",
+  "description": "A playful, creative tool to convert raw language notes into blue-ink style flashcards using AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lanote - Language Doodles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              paper: {
+                50: '#fefcf6', // Warm cream background
+                100: '#fdfbf0',
+                200: '#f8f4e0',
+                300: '#efe6c6',
+                400: '#e5d3a3',
+                500: '#d9b97b',
+                600: '#ca9b5d',
+                800: '#8e653d',
+                900: '#755336',
+              },
+              ink: {
+                50: '#eff4ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#2c5af2', // Primary Cobalt
+                600: '#1d4ed8',
+                700: '#1e40af',
+                800: '#1e3a8a',
+                900: '#0f1d45', // Dark Text
+              },
+              sticker: {
+                 50: '#fff7ed',
+                 100: '#ffedd5',
+                 400: '#fb923c',
+                 500: '#ff6b4a', // Orange Accent
+                 600: '#ea580c',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.3s ease-out',
+              'bounce-slight': 'bounceSlight 2s infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              bounceSlight: {
+                '0%, 100%': { transform: 'translateY(-5%)' },
+                '50%': { transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+</head>
+  <body class="bg-paper-50 text-ink-900 antialiased h-screen overflow-hidden selection:bg-ink-200 selection:text-ink-900">
+    <div id="root" class="h-full"></div>
+  </body>
+</html>
